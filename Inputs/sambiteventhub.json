@@ -1,0 +1,21 @@
+{
+    "Name": "sambiteventhub",
+    "Type": "Data Stream",
+    "DataSourceType": "Event Hub",
+    "EventHubProperties": {
+        "ServiceBusNamespace": "sambiteventhubnamespace",
+        "EventHubName": "sambiteventhub",
+        "SharedAccessPolicyName": "sambitstreamanalytics_sambiteventhub_policy",
+        "SharedAccessPolicyKey": null,
+        "ConsumerGroupName": "",
+        "AuthenticationMode": "ConnectionString"
+    },
+    "DataSourceCredentialDomain": "8e1e069b-36d9-4a60-9c0b-db14f563b4bf.StreamAnalystics",
+    "Serialization": {
+        "Type": "Json",
+        "Encoding": "UTF8"
+    },
+    "PartitionKey": "",
+    "CompressionType": "None",
+    "ScriptType": "Input"
+}

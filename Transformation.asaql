@@ -1,0 +1,10 @@
+
+SELECT
+    carModel.make as Make,
+    carModel.model as Model,
+    carModel.VehicleType as VehicleType,
+    state,tollAmount as TollAmount
+INTO
+    [sambitdb]
+FROM
+    [sambiteventhub]
