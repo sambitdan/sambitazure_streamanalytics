@@ -1,0 +1,16 @@
+{
+    "Name": "sambitdb",
+    "DataSourceType": "SQL Database",
+    "SQLDatabaseProperties": {
+        "Database": "sambitdb",
+        "Server": "sambitdbserver",
+        "User": "sambitdb",
+        "Password": null,
+        "Table": "blobdiagonostics",
+        "MaxWriterCount": 1,
+        "MaxBatchCount": 10000,
+        "AuthenticationMode": "ConnectionString"
+    },
+    "DataSourceCredentialDomain": null,
+    "ScriptType": "Output"
+}

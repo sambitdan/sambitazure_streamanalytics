@@ -1,0 +1,13 @@
+
+SELECT
+    records.ArrayValue.category as Category,
+    records.ArrayValue.operationName as OperationName,
+    records.ArrayValue.statusText as StatusText,
+    records.ArrayValue.objectKey as ObjectKey,
+    records.ArrayValue.[identity].type as IdentityType,
+    records.ArrayValue.[identity].tokenHash as TokenHash
+INTO 
+    [sambitdb]
+FROM
+    [sambiteventhub] sh
+    CROSS APPLY GetArrayElements(sh.records) as records
