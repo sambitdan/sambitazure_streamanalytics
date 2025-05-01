@@ -1,0 +1,27 @@
+{
+    "Name": "insights",
+    "Type": "Data Stream",
+    "DataSourceType": "Blob Storage",
+    "BlobStorageProperties": {
+        "StorageAccounts": [
+            {
+                "AccountName": "sambitazuredatalake",
+                "AccountKey": null
+            }
+        ],
+        "Container": "insights-logs-networksecuritygroupflowevent",
+        "PathPattern": "",
+        "DateFormat": "yyyy/MM/dd",
+        "TimeFormat": "HH",
+        "SourcePartitionCount": 1,
+        "AuthenticationMode": "ConnectionString"
+    },
+    "DataSourceCredentialDomain": "ea8c25f9-fe40-469d-aad6-3a4a4b47ad5b.StreamAnalystics",
+    "Serialization": {
+        "Type": "Json",
+        "Encoding": "UTF8"
+    },
+    "PartitionKey": "",
+    "CompressionType": "None",
+    "ScriptType": "Input"
+}

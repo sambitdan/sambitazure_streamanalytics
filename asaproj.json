@@ -1,0 +1,22 @@
+{
+    "name": "sambitazurestreamanalytics",
+    "startFile": "Transformation.asaql",
+    "configurations": [
+        {
+            "filePath": "Functions/mystringudf.js.json",
+            "subType": "JSFunction"
+        },
+        {
+            "filePath": "JobConfig.json",
+            "subType": "JobConfig"
+        },
+        {
+            "filePath": "Outputs/flowtuples.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Inputs/insights.json",
+            "subType": "Input"
+        }
+    ]
+}

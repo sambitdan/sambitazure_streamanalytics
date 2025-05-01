@@ -1,0 +1,19 @@
+
+With stage1 as(
+select Records.ArrayValue.time as RecordedTime,
+GetArrayElement(Records.ArrayValue.properties.flows,0) as flows
+from 
+insights i
+CROSS APPLY GetArrayElements(i.records) as Records),
+stage2 as(
+select s1.RecordedTime,flows   from stage1 s1
+CROSS APPLY GetArrayElements(s1.flows.flows) as flows),stage3 AS (
+select s2.RecordedTime,flows.arrayvalue as flowtuples from stage2 s2 CROSS APPLY GetArrayElements(s2.flows.arrayvalue.flowTuples) as flows)
+SELECT s3.RecordedTime as Recordedtime,
+UDF.mystringudf(s3.flowtuples,0) AS Mac,
+UDF.mystringudf(s3.flowtuples,1) as SourceIPAddress,
+UDF.mystringudf(s3.flowtuples,2) as DestinationIPAddress,
+UDF.mystringudf(s3.flowtuples,3) as SourcePort,
+UDF.mystringudf(s3.flowtuples,7) as Decision  
+INTO [flowtuples]
+FROM stage3 s3

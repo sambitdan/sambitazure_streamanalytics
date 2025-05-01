@@ -1,0 +1,16 @@
+{
+    "Name": "mystringudf",
+    "Type": "Scalar",
+    "ScriptType": "JSFunction",
+    "FunctionInputs": [
+        {
+            "DataType": "any",
+            "IsConfigurationParameter": null
+        },
+        {
+            "DataType": "any",
+            "IsConfigurationParameter": null
+        }
+    ],
+    "OutputType": "any"
+}
